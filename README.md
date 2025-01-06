@@ -1,6 +1,6 @@
 # **Airline-Passenger-Satisfaction-Analysis-Using-Machine-Learning**
 
-**DATASET**
+# **DATASET**
 
 [Airline Passenger Satisfaction Dataset](https://drive.google.com/file/d/1VtYC86HrBZNrX3-4E-wtQ6ntz469A0IF/view?usp=sharing)
 
@@ -12,7 +12,7 @@ The dataset contains real-world feedback from airline passengers, offering a com
 * Service Ratings: In-flight WiFi Service, Gate Location, Food and Drink, Cleanliness, etc.
 * Target Variable: Satisfaction (Satisfied or Neutral/Dissatisfied)
 
-**GOAL OF THE PROJECT**
+# **GOAL OF THE PROJECT**
 
 **Objective:** The primary objective is to build a robust machine learning model that can accurately classify airline passengers' satisfaction levels as either "Satisfied" or "Neutral/Dissatisfied."
 
@@ -20,7 +20,7 @@ The dataset contains real-world feedback from airline passengers, offering a com
 
 **Key Metrics:** The model will be evaluated using metrics such as Accuracy, Precision, Recall, F1 Score, and ROC-AUC.
 
-**TOOLS USED**
+# **TOOLS USED**
 
 Programming Language: Python
 
@@ -51,7 +51,7 @@ Model Evaluation Metrics:
   
 Model Persistence: Joblib
 
-**Overview of the Project**
+# **Overview of the Project**
 
 This project involves the following steps:
 
