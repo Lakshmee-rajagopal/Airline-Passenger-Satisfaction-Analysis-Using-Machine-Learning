@@ -13,7 +13,12 @@ The dataset contains real-world feedback from airline passengers, offering a com
 * Target Variable: Satisfaction (Satisfied or Neutral/Dissatisfied)
 
 **GOAL OF THE PROJECT**
-The primary objective of this project is to build an efficient machine learning pipeline to predict airline customer satisfaction. The output will categorize passengers as either "Satisfied" or "Neutral or Dissatisfied." Performance will be evaluated using various metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.
+
+**Objective:** The primary objective is to build a robust machine learning model that can accurately classify airline passengers' satisfaction levels as either "Satisfied" or "Neutral/Dissatisfied."
+
+**Target Output:** A binary classification output for passenger satisfaction.
+
+**Key Metrics:** The model will be evaluated using metrics such as Accuracy, Precision, Recall, F1 Score, and ROC-AUC.
 
 **TOOLS USED**
 
