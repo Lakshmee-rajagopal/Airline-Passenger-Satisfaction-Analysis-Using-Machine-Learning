@@ -37,7 +37,7 @@ Plot confusion matrices and ROC curves for each model.
 Use GridSearchCV to optimize hyperparameters for all models.
 
 8) Selecting the Best Model:
-Identify the best-performing model based on testing accuracy and other evaluation metrics.
+Identify the best-performing model based on the weighted average of all evaluation metrics.
 Display the best model along with its evaluation metrics.
 
 9) Saving the Model:
