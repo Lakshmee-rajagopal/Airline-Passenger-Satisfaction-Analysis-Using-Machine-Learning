@@ -1,6 +1,50 @@
 # **Airline-Passenger-Satisfaction-Analysis-Using-Machine-Learning**
 
+**DATASET**
+
+[Airline Passenger Satisfaction Dataset](https://drive.google.com/file/d/1VtYC86HrBZNrX3-4E-wtQ6ntz469A0IF/view?usp=sharing)
+
+The dataset is sourced from Maven Analytics which represents real-world data collected from airline passengers. The information has been aggregated from passenger surveys and feedback forms administered by airlines to understand customer satisfaction better.
+
+The dataset contains real-world feedback from airline passengers, offering a comprehensive view of customer satisfaction levels and factors influencing them. It provides information about demographic details, flight characteristics, and in-flight service ratings. The data structure includes:
+* Demographics: Gender, Age
+* Flight Details: Customer Type, Type of Travel, Class, Flight Distance, Departure Delay, Arrival Delay
+* Service Ratings: In-flight WiFi Service, Gate Location, Food and Drink, Cleanliness, etc.
+* Target Variable: Satisfaction (Satisfied or Neutral/Dissatisfied)
+
+**GOAL OF THE PROJECT**
 The primary objective of this project is to build an efficient machine learning pipeline to predict airline customer satisfaction. The output will categorize passengers as either "Satisfied" or "Neutral or Dissatisfied." Performance will be evaluated using various metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.
+
+**TOOLS USED**
+
+Programming Language: Python
+
+Development Environment: Google Colab
+
+Data Manipulation and Analysis: Pandas, NumPy
+
+Data Visualization: Matplotlib, Seaborn
+
+Machine Learning Libraries: Scikit-Learn
+
+Machine Learning Models:
+
+* Logistic Regression
+* Decision Tree
+* Random Forest
+* Support Vector Machine (SVM)
+* Gradient Boosting
+* Hyperparameter Tuning: GridSearchCV
+
+Model Evaluation Metrics:
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* ROC-AUC
+  
+Model Persistence: Joblib
 
 **Overview of the Project**
 
@@ -46,16 +90,5 @@ Save the best model as a pipeline for future predictions.
 10) Prediction Interface:
 A prediction interface is developed to help users in testing unseen data.
 
-**DATA STORY**
-
-[Airline Passenger Satisfaction Dataset](https://drive.google.com/file/d/1VtYC86HrBZNrX3-4E-wtQ6ntz469A0IF/view?usp=sharing)
-
-The dataset is sourced from Maven Analytics which represents real-world data collected from airline passengers. The information has been aggregated from passenger surveys and feedback forms administered by airlines to understand customer satisfaction better.
-
-The dataset contains real-world feedback from airline passengers, offering a comprehensive view of customer satisfaction levels and factors influencing them. It provides information about demographic details, flight characteristics, and in-flight service ratings. The data structure includes:
-* Demographics: Gender, Age
-* Flight Details: Customer Type, Type of Travel, Class, Flight Distance, Departure Delay, Arrival Delay
-* Service Ratings: In-flight WiFi Service, Gate Location, Food and Drink, Cleanliness, etc.
-* Target Variable: Satisfaction (Satisfied or Neutral/Dissatisfied)
 
 This project successfully predicts passenger satisfaction using various machine learning models. It highlights critical factors affecting satisfaction, offering airlines actionable insights to enhance customer experiences.
