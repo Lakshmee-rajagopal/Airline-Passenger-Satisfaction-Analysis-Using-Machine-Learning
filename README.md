@@ -1,4 +1,4 @@
-# **Airline-Passenger-Satisfaction-Analysis-Using-Machine-Learning**
+# **Airline Passenger Satisfaction Analysis Using Machine Learning**
 
 # **DATASET**
 
