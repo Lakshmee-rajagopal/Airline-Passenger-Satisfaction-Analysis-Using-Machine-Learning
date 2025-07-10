@@ -1,99 +1,131 @@
-# **Airline Passenger Satisfaction Analysis Using Machine Learning**
+# ✈️ Airline Passenger Satisfaction Analysis using Machine Learning
 
-# **DATASET**
+A machine learning project aimed at predicting passenger satisfaction based on flight experience, demographics, and service ratings. Built using Python, scikit-learn, and SMOTE to address class imbalance.
 
-[Airline Passenger Satisfaction Dataset](https://drive.google.com/file/d/1VtYC86HrBZNrX3-4E-wtQ6ntz469A0IF/view?usp=sharing)
+---
 
-The dataset is sourced from Maven Analytics which represents real-world data collected from airline passengers. The information has been aggregated from passenger surveys and feedback forms administered by airlines to understand customer satisfaction better.
+## 📌 Overview
 
-The dataset contains real-world feedback from airline passengers, offering a comprehensive view of customer satisfaction levels and factors influencing them. It provides information about demographic details, flight characteristics, and in-flight service ratings. The data structure includes:
-* Demographics: Gender, Age
-* Flight Details: Customer Type, Type of Travel, Class, Flight Distance, Departure Delay, Arrival Delay
-* Service Ratings: In-flight WiFi Service, Gate Location, Food and Drink, Cleanliness, etc.
-* Target Variable: Satisfaction (Satisfied or Neutral/Dissatisfied)
+Airline customer satisfaction is critical for improving service quality and retaining loyal travelers.  
+This project builds a machine learning pipeline to classify whether a passenger is **“Satisfied”** or **“Neutral/Dissatisfied”** using features like:
 
-# **GOAL OF THE PROJECT**
+- In-flight services (WiFi, Food, Cleanliness)
+- Travel Class, Flight Distance
+- Customer type, Age, Delay status
 
-**Objective:** The primary objective is to build a robust machine learning model that can accurately classify airline passengers' satisfaction levels as either "Satisfied" or "Neutral/Dissatisfied."
+---
 
-**Target Output:** A binary classification output for passenger satisfaction.
+## 🎯 Objective
 
-**Key Metrics:** The model will be evaluated using metrics such as Accuracy, Precision, Recall, F1 Score, and ROC-AUC.
+To develop a robust binary classification model that predicts airline passenger satisfaction using survey data.  
+The model outputs:
 
-# **TOOLS USED**
+- ✅ `Satisfied`
+- ❌ `Neutral or Dissatisfied`
 
-Programming Language: Python
+---
 
-Development Environment: Google Colab
+## 🗃 Dataset
 
-Data Manipulation and Analysis: Pandas, NumPy
+- **Source:** Maven Analytics  
+- **Format:** CSV  
+- **Size:** 129,880 rows × 24 columns  
+- **Access:** [Download via Google Drive](https://drive.google.com/file/d/1VtYC86HrBZNrX3-4E-wtQ6ntz469A0IF/view?usp=sharing)
 
-Data Visualization: Matplotlib, Seaborn
+### 🔎 Features Include:
+- Demographics: Age, Gender  
+- Travel Info: Travel Type, Class, Flight Distance, Delay Timings  
+- Services Rated: Online Boarding, WiFi, Food, Seat Comfort  
+- 🎯 **Target Column:** `Satisfaction`
 
-Machine Learning Libraries: Scikit-Learn
+---
 
-Machine Learning Models:
+## 🧰 Tools & Libraries
 
-* Logistic Regression
-* Decision Tree
-* Random Forest
-* Support Vector Machine (SVM)
-* Gradient Boosting
-* Hyperparameter Tuning: GridSearchCV
+- **Language:** Python  
+- **IDE:** Google Colab  
+- **Data Handling:** `pandas`, `numpy`  
+- **Visualization:** `matplotlib`, `seaborn`  
+- **Modeling:** `scikit-learn`  
+- **Class Imbalance:** `imbalanced-learn` (SMOTE)  
+- **Model Persistence:** `joblib`
 
-Model Evaluation Metrics:
+---
 
-* Accuracy
-* Precision
-* Recall
-* F1-Score
-* ROC-AUC
-  
-Model Persistence: Joblib
+## 🔍 Workflow Summary
 
-# **Overview of the Project**
+### ✅ Data Preprocessing
+- Null handling with median imputation
+- Outlier removal using IQR
+- Feature encoding (OneHotEncoder)
+- Feature scaling (StandardScaler)
 
-This project involves the following steps:
+### ✅ Exploratory Data Analysis
+- Satisfaction trends by class, WiFi quality, age group
+- Correlation heatmaps & target distribution plots
 
-1) Dataset Preprocessing:
-Handle missing values using median imputation.
-Remove outliers using the Interquartile Range (IQR) method.
-Ensure proper data types for categorical and numerical columns.
-Check for duplicate entries and clean the dataset.
+### ✅ Feature Selection
+- Top 10 features selected using `SelectKBest` (mutual information)
 
-2) Exploratory Data Analysis (EDA):
-Visualize the distribution of the target variable.
-Analyze correlations among features.
-Generate visual insights on features like Age, Flight Distance, Travel Class, and In-flight WiFi Service.
+### ✅ Class Imbalance Handling
+- Applied **SMOTE** to balance the dataset (approx. 56% Satisfied, 44% Dissatisfied)
 
-3) Addressing Class Imbalance:
-Check for imbalanced data in the target variable.
-Apply Synthetic Minority Oversampling Technique (SMOTE) to balance the dataset.
+### ✅ Model Building
+- Trained 5 algorithms:
+  - Logistic Regression
+  - Decision Tree
+  - Random Forest
+  - SVM
+  - Gradient Boosting
 
-4) Feature Selection:
-Use SelectKBest with mutual information to identify the top features influencing passenger satisfaction.
-Data Splitting and Preprocessing:
+### ✅ Hyperparameter Tuning
+- Used `GridSearchCV` for all models  
+- Evaluated using: Accuracy, Precision, Recall, F1, ROC-AUC
 
-5) Split the dataset into training and testing sets.
-Apply scaling to numerical features and one-hot encoding to categorical features.
+### ✅ Final Model: **Random Forest**
+- Saved using `joblib` for future use
 
-6) Model Training:
-Train multiple machine learning models: Logistic Regression, Decision Tree, Random Forest, Support Vector Machine (SVM), and Gradient Boosting.
-Evaluate each model using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.
-Plot confusion matrices and ROC curves for each model.
+---
 
-7) Hyperparameter Tuning:
-Use GridSearchCV to optimize hyperparameters for all models.
+## 🏆 Model Performance (Random Forest)
 
-8) Selecting the Best Model:
-Identify the best-performing model based on the weighted average of all evaluation metrics.
-Display the best model along with its evaluation metrics.
+| Metric        | Value      |
+|---------------|------------|
+| Accuracy      | 93.25%     |
+| Precision     | 94.63%     |
+| Recall        | 91.63%     |
+| F1 Score      | 0.931      |
+| ROC-AUC Score | 0.984      |
 
-9) Saving the Model:
-Save the best model as a pipeline for future predictions.
+### 🔑 Top Features:
+- Online Boarding
+- Seat Comfort
+- In-flight WiFi
+- Type of Travel
+- Class of Travel
 
-10) Prediction Interface:
-A prediction interface is developed to help users in testing unseen data.
+---
+
+## 📊 Visual Insights
+
+Key charts and insights are included in the Jupyter notebook.  
+Visuals include:
+
+- Target distribution bar chart
+- Correlation heatmap
+- Satisfaction vs Travel Class
+- ROC Curve
+- Confusion Matrix
+- Model comparison across metrics
+
+---
+
+## 💾 Repository Contents
+
+- 📓 [View the Jupyter Notebook with code, visualizations, and analysis](PROJECT_AIRLINE_PASSENGER_SATISFACTION_ANALYSIS_USING_MACHINE_LEARNING.ipynb)
+
+- `README.md` — Project overview, workflow, insights, and setup.
+- Visuals embedded directly in the notebook.
+- Dataset not included due to size — [Access it here](https://drive.google.com/file/d/1VtYC86HrBZNrX3-4E-wtQ6ntz469A0IF/view?usp=sharing).
 
 
-This project successfully predicts passenger satisfaction using various machine learning models. It highlights critical factors affecting satisfaction, offering airlines actionable insights to enhance customer experiences.
