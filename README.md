@@ -126,6 +126,6 @@ Visuals include:
 
 - `README.md` — Project overview, workflow, insights, and setup.
 - Visuals embedded directly in the notebook.
-- Dataset not included due to size — [Access it here](https://drive.google.com/file/d/1VtYC86HrBZNrX3-4E-wtQ6ntz469A0IF/view?usp=sharing).
+- Dataset — [Access it here](https://drive.google.com/file/d/1VtYC86HrBZNrX3-4E-wtQ6ntz469A0IF/view?usp=sharing).
 
 
